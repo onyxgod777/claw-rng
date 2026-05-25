@@ -12,8 +12,6 @@ import {
 } from "@solana/wallet-adapter-wallets";
 import { clusterApiUrl } from "@solana/web3.js";
 
-require("@solana/wallet-adapter-react-ui/styles.css");
-
 export default function AppWalletProvider({
   children,
 }: {
