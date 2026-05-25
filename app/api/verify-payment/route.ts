@@ -23,14 +23,14 @@ export async function POST(req: NextRequest) {
     const connection = new Connection(rpcUrl);
     const agent = new PumpAgent(agentMint, "mainnet", connection);
 
-    const verified = await agent.validateInvoicePayment(
-      userPubkey,
+    const verified = await agent.validateInvoicePayment({
+      user: userPubkey,
       currencyMint,
       amount,
-      Number(memo),
-      Number(startTime),
-      Number(endTime)
-    );
+      memo: Number(memo),
+      startTime: Number(startTime),
+      endTime: Number(endTime),
+    });
 
     return NextResponse.json({ verified });
   } catch (err: any) {
