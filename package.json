@@ -21,11 +21,13 @@
   },
   "devDependencies": {
     "@types/node": "20.17.40",
-    "@types/react": "19.1.2",
-    "@types/react-dom": "19.1.2",
+    "@types/react": "18.3.18",
+    "@types/react-dom": "18.3.5",
     "typescript": "5.8.3"
   },
   "overrides": {
-    "@solana/web3.js": "1.98.0"
+    "@solana/web3.js": "1.98.0",
+    "@types/react": "18.3.18",
+    "@types/react-dom": "18.3.5"
   }
 }
